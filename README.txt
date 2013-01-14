@@ -1,0 +1,1 @@
+A simple boost C++ library that implements a simple thread pool.
