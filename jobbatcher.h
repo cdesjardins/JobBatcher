@@ -15,7 +15,7 @@ public:
         _pWork.reset(new boost::asio::io_service::work(_ioService));
         for ( int i = 0; i < poolSize; ++i)
         {
-            _threadGroup.create_thread(bind(&boost::asio::io_service::run, &_ioService));
+            _threadGroup.create_thread(boost::bind(&boost::asio::io_service::run, &_ioService));
         }
     }
 
