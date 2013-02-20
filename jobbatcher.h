@@ -29,7 +29,7 @@ public:
     template <typename TFunc>
     void enqueue(TFunc fun)
     {
-        _ioService.post(bind(&JobBatcher::execute<TFunc>, this, fun));
+        _ioService.post(boost::bind(&JobBatcher::execute<TFunc>, this, fun));
     }
 
     void waitForBatch()
