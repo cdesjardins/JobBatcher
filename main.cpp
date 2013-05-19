@@ -10,6 +10,7 @@ class TesterClass
 public:
     TesterClass()
     {
+        std::cout<<"Create new tester"<<std::endl;
         _data = 0;
     }
     void runSomeStuff()

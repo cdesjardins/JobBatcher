@@ -47,8 +47,7 @@ private:
     template <typename TFunc>
     void execute(TFunc fun)
     {
-        TClass client;
-        fun(client);
+        fun();
         _sem.signal();
     }
 
