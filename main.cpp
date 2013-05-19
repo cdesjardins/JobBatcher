@@ -30,7 +30,7 @@ private:
     int _data;
 };
 
-void main()
+int  main()
 {
     JobBatcher<TesterClass> *bh = new JobBatcher<TesterClass>(4);
     for (int x = 0; x < 10; x++)
@@ -43,4 +43,5 @@ void main()
         }
         bh->waitForBatch();
     }
+    return 0;
 }
