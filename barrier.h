@@ -5,7 +5,7 @@
 
 class Barrier
 {
-    unsigned int _count;
+    volatile unsigned int _count;
     boost::mutex _mutex;
     boost::condition_variable _condition;
 
