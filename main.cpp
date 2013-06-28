@@ -33,7 +33,7 @@ private:
 
 int  main()
 {
-    JobBatcher<TesterClass> *bh = new JobBatcher<TesterClass>(4);
+    boost::shared_ptr<JobBatcher> bh = JobBatcher::createJobPool(4);
     for (int x = 0; x < 10; x++)
     {
         TesterClass t;
