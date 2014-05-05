@@ -1,5 +1,5 @@
-#ifndef CNTSEM_H
-#define CNTSEM_H
+#ifndef BARRIER_H
+#define BARRIER_H
 #include <boost/thread/condition_variable.hpp>
 #include <boost/thread/mutex.hpp>
 
@@ -21,7 +21,7 @@ public:
     {
         boost::unique_lock<boost::mutex> lock(_mutex);
         _count++;
-        _condition.notify_one(); 
+        _condition.notify_all(); 
     }
 
     void take(int num)
